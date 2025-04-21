@@ -1,28 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>TON Wallet Connect</title>
-  <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TON Connect</title>
+  <script type="module">
+    import { TonConnectUI } from "https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js";
+    const tonConnectUI = new TonConnectUI({
+      manifestUrl: 'https://ethepayfinance.github.io/ton-connect-bridge/tonconnect-manifest.json',
+    });
+    window.onload = () => {
+      tonConnectUI.ui();
+    };
+  </script>
 </head>
 <body>
+  <h1>Connexion à TON Wallet</h1>
   <div id="ton-connect"></div>
-
-  <script>
-    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-      manifestUrl: "https://<ton-connect-bridge>.github.io/tonconnect-manifest.json",
-      buttonRootId: "ton-connect"
-    });
-
-    tonConnectUI.onStatusChange(wallet => {
-      if (wallet && wallet.account) {
-        const data = {
-          connected: true,
-          account: wallet.account
-        };
-        window.ReactNativeWebView?.postMessage(JSON.stringify(data));
-      }
-    });
-  </script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 {
-  "name": "Presys Wallet",
-  "description": "Connexion à PRESYS via TON Connect",
-  "url": "https://ton-connect-bridge.github.io",
-  "icons": ["https://ton.org/assets/ton_symbol.svg"],
-  "bridgeUrl": "https://bridge.tonapi.io/bridge",
-  "manifestVersion": "0.1.0"
+  "url": "https://ethepayfinance.vercel.app/ton-bridge.html",
+  "name": "Presys Wallet Connector",
+  "iconUrl": "https://yourdomain.com/icon.png",
+  "termsOfUseUrl": "https://yourdomain.com/terms",
+  "privacyPolicyUrl": "https://yourdomain.com/privacy",
+  "network": "mainnet"
 }
