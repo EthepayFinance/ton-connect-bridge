@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>TON Wallet Connect</title>
+  <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+</head>
+<body>
+  <div id="ton-connect"></div>
+
+  <script>
+    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+      manifestUrl: "https://<ton-connect-bridge>.github.io/tonconnect-manifest.json",
+      buttonRootId: "ton-connect"
+    });
+
+    tonConnectUI.onStatusChange(wallet => {
+      if (wallet && wallet.account) {
+        const data = {
+          connected: true,
+          account: wallet.account
+        };
+        window.ReactNativeWebView?.postMessage(JSON.stringify(data));
+      }
+    });
+  </script>
+</body>
+</html>

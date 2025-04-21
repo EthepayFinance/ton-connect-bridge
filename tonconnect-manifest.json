@@ -1,0 +1,8 @@
+{
+  "name": "Presys Wallet",
+  "description": "Connexion à PRESYS via TON Connect",
+  "url": "https://ton-connect-bridge.github.io",
+  "icons": ["https://ton.org/assets/ton_symbol.svg"],
+  "bridgeUrl": "https://bridge.tonapi.io/bridge",
+  "manifestVersion": "0.1.0"
+}
